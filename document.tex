@@ -4,12 +4,16 @@
 \usepackage[utf8x]{inputenc} 
 \usepackage[russian]{babel}  
 \usepackage{geometry}
+\usepackage{epstopdf}
 
 \geometry{left=2cm}
 \geometry{right=1.5cm}
 \geometry{top=2cm}
 \geometry{bottom=2cm} 
 
+\newcommand\measurepage{\dimexpr\pagegoal-\pagetotal-\baselineskip\relax}
+
+\newcommand\fillpage{\includegraphics[width=\textwidth, height=\measurepage]{img/fill_page.eps}}
 
 \title{ Техническая книга, ФМЛ №30, команда ПСИ}
 
@@ -38,6 +42,8 @@
 				\item Робот должен обладать механизмом подъема, способным подниматься на высоту 120 см и выше
 				\item По возможности робот должен обладать специальным приспособлением для зацепки корзин и их перемещения
 			\end{itemize}
+			\fillpage
+			
 		\subsection{Стратегия}
 			Период выступления делится на 2(3) периода: автономный период и основное время, которое состоит из первых 1.5 минут и последних 30 секунд.
 			В автономном периоде робот должен:
@@ -53,6 +59,7 @@
 				\item Повторять такую процедуру до окончания времени
 				\item В конце вернуться на зону парковки
 			\end{itemize}
+			\fillpage
 		
 	\section{Основная часть}
 	
