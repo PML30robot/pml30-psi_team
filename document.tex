@@ -4,7 +4,9 @@
 \usepackage[utf8x]{inputenc} 
 \usepackage[russian]{babel}  
 \usepackage{geometry}
+\usepackage{fancyhdr}
 \usepackage{epstopdf}
+
 
 \geometry{left=2cm}
 \geometry{right=1.5cm}
@@ -17,15 +19,25 @@
 
 \newcommand\fillpage{\includegraphics[width=\textwidth, height=\measurepage]{img/fill_page.eps}}
 
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[C]{PML30 Saint-Petersburg}
+\fancyfoot{}
+\fancyfoot[R]{\thepage}
+\fancyfoot[C]{Россия, Санкт-Петербург, Физико-математический Лицей №30. 2014-2015}
+
+\fancypagestyle{titlestyle}
+{
+	\fancyhead{}
+	\fancyfoot{}
+	\renewcommand{\footrulewidth}{0.0 mm}
+	\renewcommand{\headrulewidth}{0.0 mm}
+}
+
 \begin{document}
-   \begin{titlepage}
-      \begin{center}
-           \textsc{\LARGE{ФМЛ №30}}\\[1.5cm]
-	\textsc{\Large Техническая документация}\\[0.5cm]
-	{ \huge \bfseries Команда $\psi$ \\[0.4cm] }
-	      \end{center}
-   \end{titlepage}
-	\newpage
+
+
+\input{Title_page.tex}
 	
 		
 
